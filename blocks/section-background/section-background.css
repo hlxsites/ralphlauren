@@ -1,0 +1,36 @@
+.section-background-container {
+    position: relative;
+    z-index: 1;
+    background: url(https://cdn-fsly.yottaa.net/5e18d625d9314057054ee33e/www.ralphlauren.com/v~4b.7b/on/demandware.static/-/Sites-RalphLauren_US-Library/default/dw1d95ba9a/img/202004/20200402-world-of-rl-at-home-feat/20200402_rl_at_home_feat_c06_background.jpg?yocs=1P_1T_1W_) repeat;
+    text-align: center;
+    background-size: 100%;
+}
+
+.section-background-wrapper picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    object-fit: cover;
+    overflow:hidden;
+}
+
+.section-background-wrapper img {
+    /* object-position: top right; */
+    /* width: 100%; */
+    object-fit:contain;
+}
+
+.columns.white-background {
+    background-color: white;
+    /* bottom: 120%; */
+}
+
+@media (min-width: 768) {
+    .section-background-wrapper picture {
+        height: 52.375em;
+    }
+}
