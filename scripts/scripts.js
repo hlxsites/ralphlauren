@@ -3,6 +3,7 @@ import {
   buildBlock,
   loadHeader,
   loadFooter,
+  decorateBlock,
   decorateButtons,
   decorateIcons,
   decorateSections,
@@ -18,7 +19,8 @@ window.hlx.RUM_GENERATION = 'project-1'; // add your RUM generation information 
 
 function buildHeroBlock(main) {
   let title = main.querySelector('h1');
-  const picture = main.querySelector('picture');
+  let picture = main.querySelector('.art-direction');
+  if (picture) decorateBlock(picture); else picture = main.querySelector('picture');
   // eslint-disable-next-line no-bitwise
   if (title && picture
     && (title.compareDocumentPosition(picture) === Node.DOCUMENT_POSITION_PRECEDING)) {
@@ -53,7 +55,16 @@ function buildImageSignatures(main) {
       width = 370;
       height = 80;
     }
-    if (src) {
+    if (src && src.endsWith('.svg')) {
+      fetch(src)
+        .then((resp) => resp.text())
+        .then((text) => {
+          const fragment = new DOMParser().parseFromString(text, 'image/svg+xml');
+          const svg = fragment.querySelector('svg');
+          em.className = `image-signature ${lower.replaceAll(' ', '-')}`;
+          em.replaceChildren(svg);
+        });
+    } else if (src) {
       const img = document.createElement('img');
       img.className = `image-signature ${lower.replaceAll(' ', '-')}`;
       img.alt = alt;

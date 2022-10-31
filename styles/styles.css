@@ -50,6 +50,12 @@ p {
   }
 }
 
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 4.2553vw;
+  } 
+}
+
 main {
   width: 100%;
 }
@@ -62,7 +68,7 @@ img {
 }
 
 /* image signatures */
-.image-signature.rl-at-home {
+.image-signature.rl-at-home > svg {
   width: 16.375em;
   height: 5.160em;
 }

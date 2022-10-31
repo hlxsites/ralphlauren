@@ -12,7 +12,7 @@
     width: 100%;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
     .columns > div {
         display: flex;
         align-items: center;
@@ -45,4 +45,21 @@
 .columns.welcome > div > div:nth-child(2) {
     margin-left: 3.986em;
     flex: 0 1 31.250em;
+}
+
+@media only screen and (max-width: 767px) {
+    .columns.welcome {
+        width: 21.25em;
+        margin: 2.875em auto 3.188em
+    }
+
+    .columns.welcome > div > div:nth-child(1) {
+        height: 14.624em;
+    }
+
+    .columns.welcome > div > div:nth-child(2) {
+        margin-left: unset;
+        margin-top: 1.625em;
+        width: 19.438em;
+    }
 }
