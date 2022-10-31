@@ -30,3 +30,36 @@
     line-height: 1.333em;
     letter-spacing: 0.014em;
 }
+
+@media only screen and (max-width: 767px) {
+    .hero {
+        height: 30em;
+        color: white;
+    }
+
+    .hero .title-group {
+        width: 20em;
+        left: 50%;
+        transform: translateX(-50%);
+        top: unset;
+        bottom: 4.125em;
+        text-align: center;
+    }
+
+    .hero p {
+        width: unset;
+        font-size: 1.125em;
+        line-height: 1.556em;
+    }
+
+    .hero .image-signature.rl-at-home {
+        width: 16.25em;
+        height: auto;
+        margin: 0 auto 1.25em;
+    }
+
+    .hero .image-signature.rl-at-home path {
+        fill: white;
+    }
+
+}
