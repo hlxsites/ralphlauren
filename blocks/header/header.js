@@ -1,17 +1,6 @@
 import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
 
 /**
- * collapses all open nav sections
- * @param {Element} sections The container element
- */
-
-function collapseAllNavSections(sections) {
-  sections.querySelectorAll('.nav-sections > ul > li').forEach((section) => {
-    section.setAttribute('aria-expanded', 'false');
-  });
-}
-
-/**
  * decorates the header, mainly the nav
  * @param {Element} block The header block element
  */

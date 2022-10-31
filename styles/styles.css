@@ -12,8 +12,8 @@
 
  :root {
   /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
+  --link-color: #474747;
+  --link-hover-color: #474747;
   --background-color: #fff;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
@@ -85,6 +85,8 @@ p, dl, ol, ul, pre, blockquote {
 a:any-link {
   color: var(--link-color);
   text-decoration: none;
+  overflow: hidden;
+  letter-spacing: .0188rem;
 }
 
 a:hover {

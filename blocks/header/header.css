@@ -1,7 +1,6 @@
 /* header and nav layout */
 header nav {
   align-items: center;
-  padding: 0 2rem;
   position: fixed;
   z-index: 1;
   background-color: var(--background-color);
@@ -27,18 +26,21 @@ header nav .nav-logo {
 header nav .nav-menu {
   display: flex;
   flex-direction: column;
-
-  font-family: Founders Grotesk Mono Regular,Arial,Helvetica,sans-serif;
-  font-style: Normal;
+  font-family: "Founders Grotesk Mono Regular",Arial,Helvetica,sans-serif;
+  font-style: normal;
   font-weight: 500;
   color: #041e3a;
   font-size: .6875rem;
-  letter-spacing: .05625rem;
+  letter-spacing: .0563rem;
 }
 
 header nav .nav-menu>div:first-child {
   display: block;
   padding: 0.8125rem 2.0625rem 0.8125rem 0;
+}
+
+header nav .nav-menu>div:first-child a {
+  text-transform: uppercase;
 }
 
 header nav .nav-menu>div:nth-child(2) {
@@ -56,9 +58,7 @@ header nav .nav-menu>div:nth-child(2) {
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
-  
   visibility: hidden;
-  
   transition-delay: .3s;
   transition-timing-function: ease-out;
 }
@@ -68,5 +68,45 @@ header nav .nav-menu>div:nth-child(2).visible {
 }
 
 header nav .nav-menu>div:nth-child(2) div {
+  display: block;
+}
+
+header nav .nav-menu>div:nth-child(2)>div {
+  padding: 0 0.3125rem 0 1.25rem;
+}
+
+header nav .nav-menu>div:nth-child(2)>div:first-child {
+  padding: 0 4.0625rem 0 0;
+}
+
+header nav .nav-menu>div:nth-child(2) a {
+  font-weight: 400;
+  padding: 0;
+  position: static;
+  line-height: 1rem;
+  left: 0;
+  font-size: .75rem;
+  letter-spacing: .025rem;
+  color: #767676;
+}
+
+header nav .nav-menu>div:nth-child(2) p, header nav .nav-menu>div:nth-child(2) p a {
+  color: var(--text-color);
+  display: inline-block;
+  font-family: LeJeuneDeck-Regular,"Times New Roman",Times,serif;
+  font-size: 1rem;
+  left: 0;
+  line-height: 1.2;
+  position: relative;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: .0625rem;
+  margin: 0;
+}
+
+header nav .nav-menu>div:nth-child(2) li {
+  float: none!important;
+  padding: 0 0 0.8125rem;
   display: block;
 }
