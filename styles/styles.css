@@ -33,9 +33,15 @@ h1, h2, h3, h4 {
   font-size: 1em;
 }
 
-body, p, h1, h2, h3, h4 {
+body, h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
+}
+
+p {
+  margin: 0 0 1em;
+  line-height: 1.524em;
+  letter-spacing: 0.014em;
 }
 
 @media screen and (max-width: 1919px) {
@@ -46,11 +52,6 @@ body, p, h1, h2, h3, h4 {
 
 main {
   width: 100%;
-}
-
-.section {
-  max-width: 1920px;
-  margin: auto;
 }
 
 img {
@@ -78,4 +79,9 @@ main .section[data-section-status='initialized'] {
 
 main .section.highlight {
   background-color: var(--highlight-background-color);
+}
+
+main .section {
+  max-width: 1920px;
+  margin: auto;
 }

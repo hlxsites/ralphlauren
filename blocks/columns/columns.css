@@ -3,6 +3,11 @@
     flex-direction: column;
 }
 
+
+.columns > div > div > * {
+    font-size: 1.313em;
+}
+
 .columns img {
     width: 100%;
 }
@@ -16,10 +21,28 @@
 
     .columns > div > div {
         flex: 1;
-        margin-left: 32px;
     }
 
     .columns > div > div:first-of-type {
         margin-left: unset;
     }
+}
+
+/* welcome columns */
+.columns.welcome {
+    margin: 5.063em auto 5.375em
+}
+
+.columns.welcome > div {
+    justify-content: center;
+    align-items:  center;
+}
+
+.columns.welcome > div > div {
+    max-width: 38.625em;
+}
+
+.columns.welcome > div > div:nth-child(2) {
+    margin-left: 3.986em;
+    flex: 0 1 31.250em;
 }

@@ -23,6 +23,7 @@ function buildHeroBlock(main) {
   if (title && picture
     && (title.compareDocumentPosition(picture) === Node.DOCUMENT_POSITION_PRECEDING)) {
     const subTitle = title.nextElementSibling;
+    const oldSection = title.parentElement;
     if (subTitle && subTitle.nodeName === 'P') {
       const titleGroup = document.createElement('div');
       titleGroup.className = 'title-group';
@@ -32,6 +33,7 @@ function buildHeroBlock(main) {
     const section = document.createElement('div');
     section.append(buildBlock('hero', { elems: [picture, title] }));
     main.prepend(section);
+    oldSection.remove();
   }
 }
 
