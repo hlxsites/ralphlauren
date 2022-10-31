@@ -14,7 +14,7 @@ import {
   loadCSS,
 } from './lib-franklin.js';
 
-const LCP_BLOCKS = []; // add your LCP blocks to the list
+const LCP_BLOCKS = ['hero']; // add your LCP blocks to the list
 window.hlx.RUM_GENERATION = 'project-1'; // add your RUM generation information here
 
 function buildHeroBlock(main) {
@@ -55,16 +55,7 @@ function buildImageSignatures(main) {
       width = 370;
       height = 80;
     }
-    if (src && src.endsWith('.svg')) {
-      fetch(src)
-        .then((resp) => resp.text())
-        .then((text) => {
-          const fragment = new DOMParser().parseFromString(text, 'image/svg+xml');
-          const svg = fragment.querySelector('svg');
-          em.className = `image-signature ${lower.replaceAll(' ', '-')}`;
-          em.replaceChildren(svg);
-        });
-    } else if (src) {
+    if (src) {
       const img = document.createElement('img');
       img.className = `image-signature ${lower.replaceAll(' ', '-')}`;
       img.alt = alt;
@@ -72,6 +63,17 @@ function buildImageSignatures(main) {
       img.width = width;
       img.height = height;
       em.replaceWith(img);
+      // if it is an svg replace the image with the svg itself so we can style it
+      if (src.endsWith('.svg')) {
+        fetch(src)
+          .then((resp) => resp.text())
+          .then((text) => {
+            const fragment = new DOMParser().parseFromString(text, 'image/svg+xml');
+            const svg = fragment.querySelector('svg');
+            svg.classList.add('image-signature', lower.replaceAll(' ', '-'));
+            img.replaceWith(svg);
+          });
+      }
     }
   });
 }

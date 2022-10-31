@@ -58,7 +58,7 @@
         margin: 0 auto 1.25em;
     }
 
-    .hero .image-signature.rl-at-home > svg path {
+    .hero .image-signature.rl-at-home path {
         fill: white;
     }
 

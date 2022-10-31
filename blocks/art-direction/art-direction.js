@@ -13,11 +13,11 @@ export default function decorate(block) {
   const desktopPicture = createOptimizedPicture(desktop.src, desktop.alt, isFirst, [
     { media: '(min-width: 768px)', width: 2000 },
     { width: 767 },
-  ]);
+  ], desktop.width / desktop.height);
   const mobilePicture = createOptimizedPicture(mobile.src, mobile.alt, isFirst, [
     { media: '(max-width: 767px)', width: 767 },
     { width: 767 },
-  ]);
+  ], mobile.width / mobile.height);
   const img = mobilePicture.querySelector('img');
   desktopPicture.querySelectorAll('source[media]').forEach((source) => img.insertAdjacentElement('beforebegin', source));
   mobilePicture.querySelectorAll('source:not([media])').forEach((source) => img.insertAdjacentElement('beforebegin', source));
