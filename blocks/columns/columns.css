@@ -73,7 +73,7 @@
 
 .button-container a {
     /* box-sizing: border-box; */
-    color: currentColor;
+    color: currentcolor;
     cursor: pointer;
     font-family: FoundersGroteskMonoWeb-Regular, sans-serif;
     font-size: 0.750em;
@@ -95,14 +95,13 @@
     bottom: 0;
     height: 1px;
     width: 100%;
-    background: currentColor;
-    -webkit-transition: bottom .5s;
+    background: currentcolor;
     transition: bottom .5s;
 }
 
 .button-container a:hover {
     text-decoration: none;
-    color: currentColor;
+    color: currentcolor;
 }
 
 .button-container a:hover::after {

@@ -5,6 +5,7 @@
     background-size: 100%;
     background-position: 50% bottom;
     margin: 0 auto;
+    z-index: 0;
 }
 
 .section-background picture {
@@ -30,5 +31,5 @@
 }
 
 .section-background-container .default-content-wrapper {
-    padding-block: 1%;
+    padding-block: 2%;
 }
