@@ -1,7 +1,7 @@
 /* header and nav layout */
 header .nav-ticker {
   background-color: #041e3a;
-  min-height: 19px;
+  height: 19px;
   padding: 0 calc(50% - 665px);
 }
 
@@ -10,10 +10,10 @@ header .nav-ticker, header .nav-ticker p, header .nav-ticker a:any-link {
   margin: 0;
   font-family: 'Founders Grotesk Mono Regular',Arial,Helvetica,sans-serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: .875rem;
+  font-weight: 1000;
+  font-size: .625rem;
   letter-spacing: .0875rem;
-  line-height: 1.524em;
+  line-height: 1.35rem;
   text-align: center;
 }
 
@@ -24,8 +24,6 @@ header nav>div {
 
 header .nav-ticker>div {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
 }
 
 header .nav-ticker>div p {
@@ -37,28 +35,32 @@ header .nav-ticker>div p:first-child {
 }
 
 header .nav-ticker>div>div {
-  min-height: 24px;
+  min-height: 19px;
   padding: 0;
   overflow: hidden;
-  margin-left: 1rem;
+  margin: 0 0 0 1rem;
+  text-transform: uppercase;
 }
 
-header .nav-ticker>div>div:nth-child(2) {
-  margin-left: 20rem;
+header .nav-ticker>div>div:first-child {
+  margin: auto;
+  text-transform: none;
 }
 
 header nav {
   align-items: center;
   position: fixed;
   z-index: 1;
-  background-color: var(--background-color);
   width: 100vw;
-  height: var(--nav-height);
   box-sizing: border-box;
-  font-family: var(--body-font-family);
   padding: 0.9375rem 3.4375rem;
   min-height: 4.4375rem;
 }
+
+header nav:hover {
+  background-color: #fff;;
+}
+
 @media screen and (min-width: 960px) {
   header nav {
     padding: 0.9375rem 3.4375rem;
@@ -89,12 +91,16 @@ header nav .nav-logo .icon-logo {
 header nav .nav-menu {
   display: flex;
   flex-direction: column;
-  font-family: "Founders Grotesk Mono Regular",Arial,Helvetica,sans-serif;
+  font-family: "Founders Grotesk Text Regular",Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 500;
   color: #041e3a;
   font-size: .6875rem;
   letter-spacing: .0563rem;
+}
+
+header nav .nav-menu ul {
+  padding: 0;
 }
 
 header nav .nav-menu>div:first-child {
@@ -172,4 +178,13 @@ header nav .nav-menu>div:nth-child(2) li {
   float: none!important;
   padding: 0 0 0.8125rem;
   display: block;
+}
+
+header nav .nav-icons {
+  margin-left: auto;
+}
+
+header nav .nav-icons ul {
+  margin: 0;
+  list-style-type: none;
 }

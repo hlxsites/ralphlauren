@@ -24,6 +24,13 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Founders Grotesk Text Regular';
+  src: url('/styles/FoundersGroteskTextWeb-Regular.woff2') format('woff2'),
+       url('/styles/FoundersGroteskTextWeb-Regular.woff') format('woff');
+  font-display: swap;
+}
+
 body {
   font-family: LeJeuneDeck-Regular, sans-serif;
   font-size: 21.3333px;
