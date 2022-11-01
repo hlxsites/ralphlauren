@@ -72,7 +72,6 @@
 }
 
 .button-container a {
-    /* box-sizing: border-box; */
     color: currentcolor;
     cursor: pointer;
     font-family: FoundersGroteskMonoWeb-Regular, sans-serif;
