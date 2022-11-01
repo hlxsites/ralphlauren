@@ -92,6 +92,44 @@ function buildAutoBlocks(main) {
   }
 }
 
+
+/**
+ * Builds all sections with background image data elements.
+ * @param {Element} main The container element
+ */
+function decorateSectionWithBackgroundImages(main) {
+  try {
+    main.querySelectorAll('div[data-background-image]').forEach((el) => {
+      let bgimages = el.dataset.backgroundImage.split(',');
+      let backgroundImageValue = '';
+      let backgroundRepeatValue = '';
+      let backgroundSizeValue = '';
+
+      bgimages.forEach((bgimage) => {
+        if (backgroundImageValue !== '') {
+          //subsequent background images
+          backgroundImageValue += ", url('" + bgimage + "')";
+          backgroundRepeatValue += ", no-repeat";
+          backgroundSizeValue += ", 100%";
+        } else {
+          //first background image
+          backgroundImageValue += "url('" + bgimage + "')";
+          backgroundRepeatValue += "no-repeat";
+          backgroundSizeValue += "100%";
+        }
+      });
+      //set the background image values
+      el.style.backgroundImage = backgroundImageValue;
+      el.style.backgroundRepeat = backgroundRepeatValue;
+      el.style.backgroundSize = backgroundSizeValue;
+    });
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('Decorating section with background images failed!', error);
+  }
+}
+
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -104,6 +142,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateSectionWithBackgroundImages(main);
 }
 
 /**

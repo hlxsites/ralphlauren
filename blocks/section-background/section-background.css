@@ -1,0 +1,32 @@
+.section-background-container {
+    position: relative;
+    text-align: center;
+    background-position: bottom;
+    margin: 0 auto;
+    z-index: -2;
+}
+
+.section-background picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.section-background img {
+    width: 100%;
+}
+
+.section-background-container .columns-wrapper {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+.section-background-container .default-content-wrapper {
+    padding-block: 1%;
+}

@@ -91,3 +91,7 @@ main .section {
   max-width: 1920px;
   margin: auto;
 }
+
+.white-background {
+  background-color: white;
+}
