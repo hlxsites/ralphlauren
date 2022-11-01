@@ -17,6 +17,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: FoundersGroteskMonoWeb-Regular;
+  src: url('/styles/FoundersGroteskMonoWeb-Regular.woff') format('woff');
+  font-display: swap;
+}
+
 body {
   font-family: LeJeuneDeck-Regular, sans-serif;
   font-size: 21.3333px;
@@ -94,4 +100,9 @@ main .section {
 
 .white-background {
   background-color: white;
+}
+
+[data-background-image] {
+  background-repeat: no-repeat;
+  background-size: 100%;
 }

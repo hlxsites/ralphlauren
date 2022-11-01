@@ -1,9 +1,10 @@
 .section-background-container {
     position: relative;
     text-align: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
     background-position: 50% bottom;
     margin: 0 auto;
-    z-index: -2;
 }
 
 .section-background picture {
@@ -12,7 +13,6 @@
     left: 0;
     right: 0;
     bottom: 50%;
-    z-index: -1;
     overflow: hidden;
 }
 
@@ -25,6 +25,7 @@
     width: 80%;
     height: 80%;
     margin: 0 auto;
+    padding-bottom: 5%;
 }
 
 .section-background-container .default-content-wrapper {

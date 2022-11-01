@@ -102,26 +102,18 @@ function decorateSectionWithBackgroundImages(main) {
       // there might be more than one background image. Pick up all of them
       const bgimages = el.dataset.backgroundImage.split(',');
       let backgroundImageValue = '';
-      let backgroundRepeatValue = '';
-      let backgroundSizeValue = '';
 
       bgimages.forEach((bgimage) => {
         if (backgroundImageValue !== '') {
           // subsequent background images
           backgroundImageValue += `, url('${bgimage}')`;
-          backgroundRepeatValue += ', no-repeat';
-          backgroundSizeValue += ', 100%';
         } else {
           // first background image
           backgroundImageValue += `url('${bgimage}')`;
-          backgroundRepeatValue += 'no-repeat';
-          backgroundSizeValue += '100%';
         }
       });
       // set the background image values
       el.style.backgroundImage = backgroundImageValue;
-      el.style.backgroundRepeat = backgroundRepeatValue;
-      el.style.backgroundSize = backgroundSizeValue;
     });
   } catch (error) {
     // eslint-disable-next-line no-console
