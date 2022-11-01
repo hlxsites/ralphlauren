@@ -3,6 +3,7 @@ import {
   buildBlock,
   loadHeader,
   loadFooter,
+  decorateBlock,
   decorateButtons,
   decorateIcons,
   decorateSections,
@@ -13,18 +14,68 @@ import {
   loadCSS,
 } from './lib-franklin.js';
 
-const LCP_BLOCKS = []; // add your LCP blocks to the list
+const LCP_BLOCKS = ['hero']; // add your LCP blocks to the list
 window.hlx.RUM_GENERATION = 'project-1'; // add your RUM generation information here
 
 function buildHeroBlock(main) {
-  const h1 = main.querySelector('h1');
-  const picture = main.querySelector('picture');
+  let title = main.querySelector('h1');
+  let picture = main.querySelector('.art-direction');
+  if (picture) decorateBlock(picture); else picture = main.querySelector('picture');
   // eslint-disable-next-line no-bitwise
-  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
+  if (title && picture
+    && (title.compareDocumentPosition(picture) === Node.DOCUMENT_POSITION_PRECEDING)) {
+    const subTitle = title.nextElementSibling;
+    const oldSection = title.parentElement;
+    if (subTitle && subTitle.nodeName === 'P') {
+      const titleGroup = document.createElement('div');
+      titleGroup.className = 'title-group';
+      titleGroup.append(title, subTitle);
+      title = titleGroup;
+    }
     const section = document.createElement('div');
-    section.append(buildBlock('hero', { elems: [picture, h1] }));
+    section.append(buildBlock('hero', { elems: [picture, title] }));
     main.prepend(section);
+    oldSection.remove();
   }
+}
+
+function buildImageSignatures(main) {
+  main.querySelectorAll('em').forEach((em) => {
+    const alt = em.innerText.trim();
+    const lower = alt.toLowerCase();
+    let src;
+    let width;
+    let height;
+    if (lower === 'rl at home') {
+      src = '/icons/rl-at-home.svg';
+      width = 482;
+      height = 152;
+    } else if (lower === 'rl signature') {
+      src = '/icons/rl-signature.webp';
+      width = 370;
+      height = 80;
+    }
+    if (src) {
+      const img = document.createElement('img');
+      img.className = `image-signature ${lower.replaceAll(' ', '-')}`;
+      img.alt = alt;
+      img.src = src;
+      img.width = width;
+      img.height = height;
+      em.replaceWith(img);
+      // if it is an svg replace the image with the svg itself so we can style it
+      if (src.endsWith('.svg')) {
+        fetch(src)
+          .then((resp) => resp.text())
+          .then((text) => {
+            const fragment = new DOMParser().parseFromString(text, 'image/svg+xml');
+            const svg = fragment.querySelector('svg');
+            svg.classList.add('image-signature', lower.replaceAll(' ', '-'));
+            img.replaceWith(svg);
+          });
+      }
+    }
+  });
 }
 
 /**
@@ -34,6 +85,7 @@ function buildHeroBlock(main) {
 function buildAutoBlocks(main) {
   try {
     buildHeroBlock(main);
+    buildImageSignatures(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
