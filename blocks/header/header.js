@@ -19,6 +19,11 @@ export default async function decorate(block) {
     const nav = document.createElement('nav');
     nav.innerHTML = html;
     decorateIcons(nav);
+    const ticker = nav.querySelector('.nav-ticker');
+    if (ticker) {
+      ticker.parentNode.removeChild(ticker);
+      block.prepend(ticker);
+    }
     block.append(nav);
 
     // show menu content
