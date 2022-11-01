@@ -19,8 +19,8 @@
 
 @font-face {
   font-family: 'Founders Grotesk Mono Regular';
-  src: url('/styles/FoundersGroteskTextWeb-Regular.woff2') format('woff2'),
-       url('/styles/FoundersGroteskTextWeb-Regular.woff') format('woff');
+  src: url('/styles/FoundersGroteskMonoWeb-Regular.woff2') format('woff2'),
+       url('/styles/FoundersGroteskMonoWeb-Regular.woff') format('woff');
   font-display: swap;
 }
 
