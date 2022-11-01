@@ -1,1 +1,44 @@
 /* below the fold CSS goes here */
+
+/* Anchor links under Columns block */
+.columns p[class*='button-container'] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.columns a {
+    color: currentcolor;
+    cursor: pointer;
+    font-family: FoundersGroteskMonoWeb-Regular, sans-serif;
+    font-size: 0.750em;
+    line-height: 0.909em;
+    letter-spacing: 0.091em;
+    padding-bottom: calc(0.8em + 1px);
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    overflow: visible;  
+    text-decoration: none;
+}
+
+.columns a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: currentcolor;
+    transition: bottom .5s;
+}
+
+.columns a:hover {
+    text-decoration: none;
+    color: currentcolor;
+}
+
+.columns a:hover::after {
+    bottom: .5em
+}

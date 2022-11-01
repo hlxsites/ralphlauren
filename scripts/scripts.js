@@ -133,7 +133,6 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
-  decorateSectionWithBackgroundImages(main);
 }
 
 /**
@@ -179,8 +178,10 @@ async function loadLazy(doc) {
 
   loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
+  decorateSectionWithBackgroundImages(main);
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
+
   addFavIcon(`${window.hlx.codeBasePath}/styles/favicon.svg`);
   sampleRUM('lazy');
   sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
