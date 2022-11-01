@@ -57,8 +57,12 @@ header nav {
   min-height: 4.4375rem;
 }
 
-header nav:hover {
+header nav:hover, header nav.scroll {
   background-color: #fff;;
+}
+
+header nav.scroll {
+  top: 0;
 }
 
 @media screen and (min-width: 960px) {

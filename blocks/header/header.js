@@ -43,5 +43,13 @@ export default async function decorate(block) {
         menuContent.classList.remove('visible');
       });
     });
+
+    document.addEventListener('scroll', () => {
+      if (ticker.getBoundingClientRect().y < 0) {
+        nav.classList.add('scroll');
+      } else {
+        nav.classList.remove('scroll');
+      }
+    });
   }
 }
