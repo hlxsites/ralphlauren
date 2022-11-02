@@ -9,6 +9,7 @@ import {
   decorateSections,
   decorateBlocks,
   decorateTemplateAndTheme,
+  createOptimizedPicture,
   waitForLCP,
   loadBlocks,
   loadCSS,
@@ -78,6 +79,30 @@ function buildImageSignatures(main) {
   });
 }
 
+function buildSectionBackgrounds(main) {
+  main.querySelectorAll(':scope > [data-background-image]').forEach((section) => {
+    if (section.dataset.backgroundImage) {
+      const backgrounds = section.dataset.backgroundImage.split(',');
+      const div = document.createElement('div');
+      div.className = 'section-background';
+      backgrounds.forEach((background) => {
+        const { pathname } = new URL(background);
+        const picture = createOptimizedPicture(pathname, '', false);
+        div.appendChild(picture);
+      });
+      section.insertAdjacentElement('afterbegin', div);
+    }
+  });
+  main.querySelectorAll(':scope > [data-background-color]').forEach((section) => {
+    if (section.dataset.backgroundColor) {
+      const backgroundColor = section.dataset.backgroundColor.match(/#[A-Fa-f0-9]{6}/);
+      if (backgroundColor) {
+        [section.style.backgroundColor] = backgroundColor;
+      }
+    }
+  });
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -103,6 +128,7 @@ export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  buildSectionBackgrounds(main);
   decorateBlocks(main);
 }
 

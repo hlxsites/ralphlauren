@@ -3,7 +3,6 @@
     flex-direction: column;
 }
 
-
 .columns > div > div > * {
     font-size: 1.313em;
 }
@@ -29,37 +28,120 @@
 }
 
 /* welcome columns */
-.columns.welcome {
-    margin: 5.063em auto 5.375em
-}
-
-.columns.welcome > div {
+.welcome .columns > div {
     justify-content: center;
     align-items:  center;
 }
 
-.columns.welcome > div > div {
+.welcome .columns > div > div {
     max-width: 38.625em;
 }
 
-.columns.welcome > div > div:nth-child(2) {
+.welcome .columns > div > .column-2 {
     margin-left: 3.986em;
     flex: 0 1 31.250em;
 }
 
 @media only screen and (max-width: 767px) {
-    .columns.welcome {
+    .welcome .columns {
         width: 21.25em;
         margin: 2.875em auto 3.188em
     }
 
-    .columns.welcome > div > div:nth-child(1) {
+    .welcome .columns > div > .column-1 {
         height: 14.624em;
     }
 
-    .columns.welcome > div > div:nth-child(2) {
+    .welcome .columns > div > .column-2 {
         margin-left: unset;
         margin-top: 1.625em;
         width: 19.438em;
     }
+}
+
+/* story columns */
+.story .columns-wrapper {
+    width: 83em;
+}
+
+.story .columns-wrapper-1 {
+    background-color: white;
+    height: 41.5em;
+    margin-bottom: 6.250em;
+}
+
+.story .columns-wrapper-2 {
+    margin-bottom: 3.125em;   
+}
+
+.story .columns-wrapper-2 .narrow {
+    width: 76.688em;
+    margin: 0 auto;
+}
+
+.story .columns-wrapper-2 .narrow .column-image-only {
+    max-width: 41.063em;
+}
+
+.story .columns-wrapper-2 .narrow .column-text-only {
+    max-width: 27.875em;
+}
+
+
+.story .column-1.column-image-only {
+    flex: 1 0 50.250em;
+}
+
+.story .column-1.column-text-only {
+    flex: 0 1 calc(41.5em - 2 * 4.3em);
+    padding: 4.3em;
+}
+
+.story .column-2.column-text-only {
+    max-width: 23.563em;
+    flex: 0 1 calc(41.5em - 2 * 3.5em);
+    padding: 3.5em;
+}
+
+.story .columns p {
+    font-size: 1.188em;
+    margin-bottom: 1.65em;
+}
+
+.story .columns p:first-child {
+    font-family: 'Founders Grotesk Mono Regular', sans-serif;
+    margin-bottom: 0.727em;
+    font-size: 0.688em;
+    letter-spacing: 0.091em;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.story .columns [data-align='center'] p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 25.8em;
+}
+
+.story .columns .button-container {
+    font-family: 'Founders Grotesk Mono Regular', sans-serif;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    font-size: 0.725em;
+    display: inline-block;
+}
+
+.story .columns .button-container a {
+    display: inline-block;
+    padding-bottom: calc(0.8em + 1px);
+}
+
+
+.story .columns h3 {
+    font-size: 3.250em;
+    margin-bottom: 0.913em;
+}
+
+.story .columns > div:not(:first-child) {
+    display: none;
 }
