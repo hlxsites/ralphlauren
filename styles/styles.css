@@ -9,14 +9,6 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
-@font-face {
-  font-family: LeJeuneDeck-Regular;
-  src: url('/styles/LeJeuneDeck-Regular-Web.woff2') format('woff2'),
-       url('/styles/LeJeuneDeck-Regular-Web.woff') format('woff');
-  font-display: swap;
-}
-
 body {
   font-family: LeJeuneDeck-Regular, sans-serif;
   font-size: 21.3333px;
@@ -42,6 +34,16 @@ p {
   margin: 0 0 1em;
   line-height: 1.524em;
   letter-spacing: 0.014em;
+}
+
+a:any-link {
+  color: #474747;
+  text-decoration: none;
+  letter-spacing: .0188rem;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1919px) {

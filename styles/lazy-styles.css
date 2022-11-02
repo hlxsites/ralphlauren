@@ -1,1 +1,69 @@
 /* below the fold CSS goes here */
+
+/* custom fonts */
+
+@font-face {
+  font-family: "Founders Grotesk Mono Light";
+  src: url("/styles/fonts/FoundersGroteskMonoWeb-Light.eot") format("eot"), url("/styles/fonts/FoundersGroteskMonoWeb-Light.woff") format("woff"), url("/styles/fonts/FoundersGroteskMonoWeb-Light.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk Mono Medium";
+  src: url("/styles/fonts/FoundersGroteskMonoWeb-Medium.eot") format("eot"), url("/styles/fonts/FoundersGroteskMonoWeb-Medium.woff") format("woff"), url("/styles/fonts/FoundersGroteskMonoWeb-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk Mono Regular";
+  src: url("/styles/fonts/FoundersGroteskMonoWeb-Regular.eot") format("eot"), url("/styles/fonts/FoundersGroteskMonoWeb-Regular.woff") format("woff"), url("/styles/fonts/FoundersGroteskMonoWeb-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk Text Medium";
+  src: url("/styles/fonts/FoundersGroteskTextWeb-Medium.eot") format("eot"), url("/styles/fonts/FoundersGroteskTextWeb-Medium.woff") format("woff"), url("/styles/fonts/FoundersGroteskTextWeb-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk text Regular";
+  src: url("/styles/fonts/FoundersGroteskTextWeb-Regular.eot") format("eot"), url("/styles/fonts/FoundersGroteskTextWeb-Regular.woff") format("woff"), url("/styles/fonts/FoundersGroteskTextWeb-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: LeJeuneDeck-Light;
+  src: url("/styles/fonts/LeJeuneDeck-Light-Web.woff") format("woff"), url("/styles/fonts/LeJeuneDeck-Light-Web.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: LeJeuneDeck-Regular;
+  src: url("/styles/fonts/LeJeuneDeck-Regular-Web.woff") format("woff"), url("/styles/fonts/LeJeuneDeck-Regular-Web.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: LeJeuneDeck-Regular-Italic;
+  src: url("/styles/fonts/LeJeuneDeck-RegularItalic-Web.woff") format("woff"), url("/styles/fonts/LeJeuneDeck-RegularItalic-Web.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: RLNA-font;
+  src: url("/styles/fonts/RLNA-font.eot");
+  src: url("/styles/fonts/RLNA-font.eot") format("embedded-opentype"), url("/styles/fonts/RLNA-font.svg") format("svg"), url("/styles/fonts/RLNA-font.woff") format("woff"), url("/styles/fonts/RLNA-font.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: RL-icons;
+  src: url("/styles/fonts/RL-icons.eot");
+  src: url("/styles/fonts/RL-icons.eot") format("embedded-opentype"),url("/styles/fonts/RL-icons.svg") format("svg"),url("/styles/fonts/RL-icons.woff") format("woff"),url("/styles/fonts/RL-icons.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal
+}
