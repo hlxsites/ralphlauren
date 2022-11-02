@@ -1,0 +1,63 @@
+.teaser {
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.teaser .teaser-background {
+    position: absolute;
+    width: 100%;
+}
+
+.teaser .teaser-background img {
+    width: 100%;
+}
+
+.teaser .teaser-content {
+    position: relative;
+    z-index: 1;
+}
+
+.story .teaser .teaser-content {
+    width: calc(30.500em - 2 * 3.875em);
+    padding: 3.875em;
+}
+
+.story .teaser .pretitle {
+    font-family: 'Founders Grotesk Mono Regular', sans-serif;
+    font-size: 0.688em;
+    letter-spacing: 0.091em;
+    line-height: 1em;
+    margin-bottom: 0.727em;
+    text-transform: uppercase;
+}
+
+.story .teaser .title {
+    font-size: 3.25em;
+    letter-spacing: 0.019em;
+    margin-bottom: 0.91em;
+}
+
+.story .teaser .description {
+    font-size: 1.188em;
+    letter-spacing: 0.014em;
+    line-height: 1.474em;
+    margin-bottom: 1.71em;
+}
+
+.story .teaser .link {
+    font-family: 'Founders Grotesk Mono Regular', sans-serif;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    font-size: 0.75em;
+    display: inline-block;
+}
+
+
+.story .teaser-wrapper {
+    width: 83em;
+}
+
+.story .teaser-wrapper .teaser {
+    height: 100%;
+}
