@@ -1,3 +1,11 @@
+main div.footer-links-container {
+  min-height: 400px;
+}
+
+main div.footer-links-container * {
+  display: none;
+}
+
 footer {
   padding: 2.8125rem 0 2.1875rem;
   background-color: #fff;
