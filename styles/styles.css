@@ -94,7 +94,11 @@ main .section {
 }
 
 /* sections */
-main .section[data-purpose='Story'] > .default-content-wrapper {
+.section.welcome {
+  margin: 5.063em auto 5.375em
+}
+
+.section.story > .default-content-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,10 +107,10 @@ main .section[data-purpose='Story'] > .default-content-wrapper {
   letter-spacing: 0.019em;
 }
 
-main .section[data-purpose='Story'] h2 {
+.section.story h2 {
   font-size: 2.625em;
 }
 
-main .section[data-purpose='Story'] h2 ~ p {
+.section.story h2 ~ p {
   font-size: 1.188em;
 }
