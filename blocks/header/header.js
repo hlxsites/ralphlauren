@@ -18,7 +18,7 @@ export default async function decorate(block) {
     // decorate nav DOM
     const nav = document.createElement('nav');
     nav.innerHTML = html;
-    decorateIcons(nav);
+    //decorateIcons(nav);
     const ticker = nav.querySelector('.nav-ticker');
     if (ticker) {
       ticker.parentNode.removeChild(ticker);

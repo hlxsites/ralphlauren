@@ -3,6 +3,11 @@ header .nav-ticker {
   background-color: #041e3a;
   height: 19px;
   padding: 0 calc(50% - 665px);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
 }
 
 header .nav-ticker, header .nav-ticker p, header .nav-ticker a:any-link {
@@ -55,6 +60,7 @@ header nav {
   box-sizing: border-box;
   padding: 0.9375rem 3.4375rem;
   min-height: 4.4375rem;
+  margin-top: 19px;
 }
 
 header nav:hover, header nav.scroll {
@@ -63,6 +69,7 @@ header nav:hover, header nav.scroll {
 
 header nav.scroll {
   top: 0;
+  margin-top: 0;
 }
 
 @media screen and (min-width: 960px) {
