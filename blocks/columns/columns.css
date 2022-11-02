@@ -74,16 +74,16 @@
     margin-bottom: 3.125em;   
 }
 
-.story .columns-wrapper-2 .slider {
+.story .columns-wrapper-2 .narrow {
     width: 76.688em;
     margin: 0 auto;
 }
 
-.story .columns-wrapper-2 .slider .column-image-only {
-    max-width: 39.063em;
+.story .columns-wrapper-2 .narrow .column-image-only {
+    max-width: 41.063em;
 }
 
-.story .columns-wrapper-2 .slider .column-text-only {
+.story .columns-wrapper-2 .narrow .column-text-only {
     max-width: 27.875em;
 }
 

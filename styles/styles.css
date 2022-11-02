@@ -78,6 +78,10 @@ img {
   text-align: center;
 }
 
+[data-align='right'] {
+  text-align: right;
+}
+
 /* image signatures */
 .image-signature.rl-at-home {
   width: 16.375em;

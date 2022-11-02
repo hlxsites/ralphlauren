@@ -9,6 +9,10 @@
     width: 100%;
 }
 
+.teaser .teaser-background img {
+    width: 100%;
+}
+
 .teaser .teaser-content {
     position: relative;
     z-index: 1;
