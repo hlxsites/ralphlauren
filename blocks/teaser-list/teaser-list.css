@@ -1,3 +1,20 @@
 .teaser-list {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.teaser-list a {
+    margin: 0 1.5em;
+    position: relative;
+}
+
+.teaser-list-container .image-signature.rl-at-home {
+    width: 16.25em;
+    height: auto;
+    margin: 0 auto 1.25em;
+}
+
+.teaser-list-container .image-signature.rl-at-home path {
+    fill: white;
 }

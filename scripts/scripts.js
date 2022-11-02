@@ -104,7 +104,6 @@ function buildSectionBackgrounds(main) {
 }
 
 export async function lookupPages(pathnames) {
-  console.log('in lookupPages');
   if (!window.pageIndex) {
     const resp = await fetch(`${window.hlx.codeBasePath}/query-index.json`);
     const json = await resp.json();

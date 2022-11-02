@@ -13,12 +13,9 @@ function createCard(row, style) {
 }
 
 export default async function decorate(block) {
-    console.log('decorating teaser-list block now');
   const pathnames = [...block.querySelectorAll('a')].map((a) => new URL(a.href).pathname);
-  console.log(`pathnames: ${pathnames}`);
   block.textContent = '';
   const teaserList = await lookupPages(pathnames);
-  console.log(`teaserList: ${teaserList}`);
   if (teaserList.length) {
     teaserList.forEach((row) => {
       block.append(createCard(row, 'teaser-card'));
