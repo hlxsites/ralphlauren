@@ -31,6 +31,7 @@ body.appear {
 
 h1, h2, h3, h4 {
   font-size: 1em;
+  font-weight: inherit;
 }
 
 body, h1, h2, h3, h4 {
@@ -90,4 +91,22 @@ main .section.highlight {
 main .section {
   max-width: 1920px;
   margin: auto;
+}
+
+/* sections */
+main .section[data-purpose='Story'] > .default-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 14.125em;
+  letter-spacing: 0.019em;
+}
+
+main .section[data-purpose='Story'] h2 {
+  font-size: 2.625em;
+}
+
+main .section[data-purpose='Story'] h2 ~ p {
+  font-size: 1.188em;
 }
