@@ -9,28 +9,6 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
-@font-face {
-  font-family: LeJeuneDeck-Regular;
-  src: url('/styles/LeJeuneDeck-Regular-Web.woff2') format('woff2'),
-       url('/styles/LeJeuneDeck-Regular-Web.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Founders Grotesk Mono Regular';
-  src: url('/styles/FoundersGroteskMonoWeb-Regular.woff2') format('woff2'),
-       url('/styles/FoundersGroteskMonoWeb-Regular.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Founders Grotesk Text Regular';
-  src: url('/styles/FoundersGroteskTextWeb-Regular.woff2') format('woff2'),
-       url('/styles/FoundersGroteskTextWeb-Regular.woff') format('woff');
-  font-display: swap;
-}
-
 body {
   font-family: LeJeuneDeck-Regular, sans-serif;
   font-size: 21.3333px;

@@ -52,6 +52,22 @@ header .nav-ticker>div>div:first-child {
   text-transform: none;
 }
 
+header .nav-ticker .icon::before {
+  font-size: 0.8125rem;
+  padding-right: 0.5rem;
+  display: inline-block;
+}
+
+header .nav-ticker .icon-lang::before {
+  font-family: RLNA-font, Arial, Helvetica, sans-serif;
+  content: '\e90d';
+}
+
+header .nav-ticker .icon-poi::before {
+  font-family: RL-icons, Arial, Helvetica, sans-serif;
+  content: '\e901';
+}
+
 header nav {
   align-items: center;
   position: fixed;
@@ -61,6 +77,7 @@ header nav {
   padding: 0.9375rem 3.4375rem;
   min-height: 4.4375rem;
   margin-top: 19px;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 header nav:hover, header nav.scroll {
@@ -86,7 +103,7 @@ header nav.scroll {
 }
 
 header nav .nav-logo {
-  margin-right: 1.875rem;
+  margin-right: 2.8125rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -121,7 +138,10 @@ header nav .nav-menu>div:first-child {
 }
 
 header nav .nav-menu>div:first-child a {
+  font-family: 'Founders Grotesk Mono Regular',Arial,Helvetica,sans-serif;
   text-transform: uppercase;
+  font-size: .6875rem;
+  letter-spacing: .0563rem;
 }
 
 header nav .nav-menu>div:nth-child(2) {
@@ -177,13 +197,17 @@ header nav .nav-menu>div:nth-child(2) p, header nav .nav-menu>div:nth-child(2) p
   font-family: LeJeuneDeck-Regular,'Times New Roman',Times,serif;
   font-size: 1rem;
   left: 0;
-  line-height: 1.2;
+  line-height: 1.2rem;
   position: relative;
   text-transform: capitalize;
   font-style: normal;
   font-weight: 500;
   letter-spacing: .0625rem;
   margin: 0;
+}
+
+header nav .nav-icons ul li {
+  padding-left: 1.5rem;
 }
 
 header nav .nav-menu>div:nth-child(2) li {
@@ -194,9 +218,32 @@ header nav .nav-menu>div:nth-child(2) li {
 
 header nav .nav-icons {
   margin-left: auto;
+  line-height: 40px;
 }
 
 header nav .nav-icons ul {
   margin: 0;
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+header nav .nav-icons .icon-search::after {
+  content: "\e909";
+  font-family: RL-icons, Arial, Helvetica, sans-serif;
+}
+
+header nav .nav-icons .icon-wishlist::after {
+  content: "\e917";
+  font-family: RL-icons, Arial, Helvetica, sans-serif;
+}
+
+header nav .nav-icons .icon-login::after {
+  content: "\e900";
+  font-family: Rl-icons, Arial, Helvetica, sans-serif;
+}
+
+header nav .nav-icons .icon-checkout::after {
+  content: "\e90c";
+  font-family: RL-icons, Arial, Helvetica, sans-serif;
 }
