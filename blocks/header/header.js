@@ -1,4 +1,4 @@
-import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
+import { readBlockConfig } from '../../scripts/lib-franklin.js';
 
 /**
  * decorates the header, mainly the nav
@@ -18,7 +18,6 @@ export default async function decorate(block) {
     // decorate nav DOM
     const nav = document.createElement('nav');
     nav.innerHTML = html;
-    //decorateIcons(nav);
     const ticker = nav.querySelector('.nav-ticker');
     if (ticker) {
       ticker.parentNode.removeChild(ticker);

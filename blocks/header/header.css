@@ -91,6 +91,7 @@ header nav .nav-logo {
   flex-direction: column;
   justify-content: center;
   height: 2.5rem;
+  background: url('/icons/logo.svg') center no-repeat;
 }
 
 header nav .nav-logo .icon-logo {
@@ -102,7 +103,7 @@ header nav .nav-logo .icon-logo {
 header nav .nav-menu {
   display: flex;
   flex-direction: column;
-  font-family: "Founders Grotesk Text Regular",Arial,Helvetica,sans-serif;
+  font-family: 'Founders Grotesk Text Regular',Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 500;
   color: #041e3a;
@@ -173,7 +174,7 @@ header nav .nav-menu>div:nth-child(2) a {
 header nav .nav-menu>div:nth-child(2) p, header nav .nav-menu>div:nth-child(2) p a {
   color: var(--text-color);
   display: inline-block;
-  font-family: LeJeuneDeck-Regular,"Times New Roman",Times,serif;
+  font-family: LeJeuneDeck-Regular,'Times New Roman',Times,serif;
   font-size: 1rem;
   left: 0;
   line-height: 1.2;
