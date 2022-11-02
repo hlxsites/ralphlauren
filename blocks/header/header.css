@@ -1,4 +1,12 @@
 /* header and nav layout */
+main div.nav-ticker-container {
+  min-height: 400px;
+}
+
+main div.nav-ticker-container * {
+  display: none;
+}
+
 header .nav-ticker {
   background-color: #041e3a;
   height: 19px;
