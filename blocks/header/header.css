@@ -142,6 +142,18 @@ header nav .nav-menu>div:first-child a {
   text-transform: uppercase;
   font-size: .6875rem;
   letter-spacing: .0563rem;
+  position: relative;
+  text-decoration: none;
+}
+
+header nav .nav-menu:nth-child(7) a::after, header nav .nav-menu>div:first-child a:hover::after {
+  content: "\00a0";
+  border-bottom: 1px solid #041e3a;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  text-align: center;
+  width: 100%;
 }
 
 header nav .nav-menu>div:nth-child(2) {

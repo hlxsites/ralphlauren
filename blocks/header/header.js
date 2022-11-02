@@ -26,9 +26,9 @@ export default async function decorate(block) {
     block.append(nav);
 
     // show menu content
-    nav.querySelectorAll('header nav .nav-menu>div:first-child').forEach((menuHeader) => {
+    nav.querySelectorAll('header nav .nav-menu>div:first-child div').forEach((menuHeader) => {
       menuHeader.addEventListener('mouseenter', (e) => {
-        const menuContent = e.target.parentElement.children[1];
+        const menuContent = e.target.parentElement.parentElement.children[1];
         if (menuContent) {
           menuContent.classList.add('visible');
         }
