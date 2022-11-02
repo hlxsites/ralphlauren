@@ -18,6 +18,7 @@
     z-index: 1;
 }
 
+/* fullwidth teaser */
 .story .teaser .teaser-content {
     width: calc(30.500em - 2 * 3.875em);
     padding: 3.875em;
@@ -53,11 +54,34 @@
     display: inline-block;
 }
 
-
 .story .teaser-wrapper {
     width: 83em;
 }
 
 .story .teaser-wrapper .teaser {
     height: 100%;
+}
+
+/* image teaser */
+.story .teaser.image .teaser-content {
+    width: 54.188em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 3.875em 3.875em;
+}
+
+.story .teaser.image .teaser-content .description,
+.story .teaser.image .teaser-content .link {
+    width: 22em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.story.app .teaser.image .image {
+    margin-bottom: -5em;
+}
+
+.story.app .teaser.image .teaser-content {
+    padding-bottom: 2.7em;
 }

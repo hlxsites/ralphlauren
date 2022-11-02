@@ -92,6 +92,11 @@ img {
   width: 9.438em;
 }
 
+.app-store {
+  height: 2.313em;
+  width: auto;
+}
+
 /* progressive section appearance */
 main .section[data-section-status='loading'],
 main .section[data-section-status='initialized'] {
@@ -124,6 +129,10 @@ main .section {
   align-items: center;
   height: 14.125em;
   letter-spacing: 0.019em;
+}
+
+.section.story > .default-content-wrapper img {
+  width: 4.438em;
 }
 
 .columns.invert, 
