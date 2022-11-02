@@ -17,6 +17,13 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: Founders Grotesk Mono Regular;
+  src: url('/styles/FoundersGroteskMonoWeb-Regular.woff2') format("woff2"), 
+  url('/styles/FoundersGroteskMonoWeb-Regular.woff') format("woff");
+  font-display: swap;
+}
+
 body {
   font-family: LeJeuneDeck-Regular, sans-serif;
   font-size: 21.3333px;
@@ -68,6 +75,10 @@ img {
   height: auto;
 }
 
+[data-align='center'] {
+  text-align: center;
+}
+
 /* image signatures */
 .image-signature.rl-at-home {
   width: 16.375em;
@@ -96,6 +107,10 @@ main .section {
 /* sections */
 .section.welcome {
   margin: 5.063em auto 5.375em
+}
+
+.section.story > *:not(.section-background) {
+  margin: 0 4.53125em;
 }
 
 .section.story > .default-content-wrapper {
