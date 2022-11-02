@@ -18,7 +18,7 @@
 }
 
 @font-face {
-  font-family: Founders Grotesk Mono Regular;
+  font-family: "Founders Grotesk Mono Regular";
   src: url('/styles/FoundersGroteskMonoWeb-Regular.woff2') format("woff2"), 
   url('/styles/FoundersGroteskMonoWeb-Regular.woff') format("woff");
   font-display: swap;
@@ -30,6 +30,10 @@ body {
   color: #041E3A; /* rgb(4, 30, 58) */
   -webkit-font-smoothing: antialiased;
   display: none;
+}
+
+* {
+  border-color: #041E3A;
 }
 
 body.appear {
@@ -50,6 +54,11 @@ p {
   margin: 0 0 1em;
   line-height: 1.524em;
   letter-spacing: 0.014em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1919px) {
@@ -101,7 +110,7 @@ main .section.highlight {
 
 main .section {
   max-width: 1920px;
-  margin: auto;
+  margin: 0 auto 2.063em;
 }
 
 /* sections */
@@ -110,7 +119,8 @@ main .section {
 }
 
 .section.story > *:not(.section-background) {
-  margin: 0 4.53125em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section.story > .default-content-wrapper {
@@ -120,6 +130,10 @@ main .section {
   align-items: center;
   height: 14.125em;
   letter-spacing: 0.019em;
+}
+
+.section.story.invert > .default-content-wrapper {
+  color: white;
 }
 
 .section.story h2 {
