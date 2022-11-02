@@ -54,6 +54,7 @@
   font-family: RLNA-font;
   src: url("/styles/fonts/RLNA-font.eot");
   src: url("/styles/fonts/RLNA-font.eot") format("embedded-opentype"), url("/styles/fonts/RLNA-font.svg") format("svg"), url("/styles/fonts/RLNA-font.woff") format("woff"), url("/styles/fonts/RLNA-font.ttf") format("truetype");
+  font-display: swap;
   font-weight: 400;
   font-style: normal
 }
@@ -62,6 +63,7 @@
   font-family: RL-icons;
   src: url("/styles/fonts/RL-icons.eot");
   src: url("/styles/fonts/RL-icons.eot") format("embedded-opentype"),url("/styles/fonts/RL-icons.svg") format("svg"),url("/styles/fonts/RL-icons.woff") format("woff"),url("/styles/fonts/RL-icons.ttf") format("truetype");
+  font-display: swap;
   font-weight: 400;
   font-style: normal
 }
