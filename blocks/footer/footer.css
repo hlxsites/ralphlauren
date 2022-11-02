@@ -1,14 +1,165 @@
 footer {
-  padding: 2rem;
-  background-color: var(--overlay-background-color);
-  font-size: var(--body-font-size-s);
+  padding: 2.8125rem 0 2.1875rem;
+  background-color: #fff;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 footer .footer {
-  max-width: 1200px;
-  margin: auto;
+  clear: both;
+  letter-spacing: .3px;
+  border-top: 1px solid #d1d1d1;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
-footer .footer p {
+footer .footer-links {
+  border-bottom: 1px solid #d1d1d1;
+}
+
+footer .footer-links>div {
+  display: flex;
+}
+
+footer .footer-links>div>div {
+  width: 25%;
+  border-top: none;
+  flex-grow: 1;
+  padding: 0 0 0 1.875rem;
+  margin: 2.1875rem 0;
+  border-right: 1px solid #d1d1d1;
+}
+
+footer .footer-links ul {
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+footer .footer-links ul li {
+  margin-bottom: 0.9375rem;
+}
+
+footer .footer-links h3 {
+  font-size: .75rem;
+  text-transform: uppercase;
+  color: #252525;
+  letter-spacing: 0.0031;
+  font-family: "Founders Grotesk Text Medium",Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 1.375rem;
+}
+
+footer .footer-links ul li a {
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  font-size: .75rem;
+  font-family: "Founders Grotesk text Regular",Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.0016rem;
+}
+
+footer .footer-links form {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+footer .footer-links input, button {
+  line-height: 1.25rem;
+  font-family: "Founders Grotesk Mono Regular",Arial,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+footer .footer-links input {
+  border: 1px solid #757575;
+  box-sizing: border-box;
+  padding: 0.7813rem 1.25rem;
+  text-indent: 0;
+  width: 100%;
+  border-radius: 0;
+  height: 52px;
+}
+
+footer .footer-links button {
+  background-color: #041e3a;
+  border: 1px solid #041e3a;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: .75rem;
+  letter-spacing: .05em;
+  margin: 0;
+  min-height: 3.25rem;
+  padding: 0.9375rem 0;
+  text-align: center;
+  text-decoration: none;
+  outline: 0;
+  width: 43.5%;
+}
+
+footer .footer>div>div>p {
+  color: #252525;
+  text-align: center;
+  font-size: .6875rem;
+  letter-spacing: 0;
+  font-family: "Founders Grotesk text Regular",Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 1.875rem;
+}
+
+footer .footer>div>div>p:last-child {
+  padding-top: 0;
+}
+
+footer .footer>div>div>p a {
+  color: #252525;
+  text-decoration: none;
+  margin: 0 3em;
+}
+
+footer .footer-links>div>div:last-child {
+  border: none;
+}
+
+footer .footer-links>div>div:last-child p {
+  color: #000;
+  text-decoration: none;
+  font-size: .75rem;
+  font-family: "Founders Grotesk text Regular",Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.0016rem;
+  margin: 0;
+}
+
+footer .footer-links>div>div:last-child a {
+  text-decoration: underline;
+}
+
+footer .footer-links>div>div:last-child a:hover {
+  color: #000;
+}
+
+@media screen and (min-width: 960px) {
+  footer .footer-links h3{
+    font-size: .875rem;
+  }
+
+  footer .footer-links ul li {
+    margin-bottom: 0.625rem;
+  }
+
+  footer .footer-links ul li a {
+    font-size: .8125rem;
+  }
 }

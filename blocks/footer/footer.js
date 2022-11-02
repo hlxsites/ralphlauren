@@ -1,9 +1,26 @@
-import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
+import { readBlockConfig } from '../../scripts/lib-franklin.js';
 
 /**
  * loads and decorates the footer
  * @param {Element} block The header block element
  */
+
+function createContactForm() {
+  const form = document.createElement('form');
+  form.setAttribute('action', '#');
+  form.setAttribute('method', 'post');
+  const input = document.createElement('input');
+  input.setAttribute('type', 'email');
+  input.setAttribute('name', 'email');
+  input.setAttribute('placeholder', 'Enter Email Address');
+  form.append(input);
+  const button = document.createElement('button');
+  button.setAttribute('type', 'submit');
+  button.setAttribute('value', 'Submit');
+  button.innerText = 'Submit';
+  form.append(button);
+  return form;
+}
 
 export default async function decorate(block) {
   const cfg = readBlockConfig(block);
@@ -14,6 +31,9 @@ export default async function decorate(block) {
   const html = await resp.text();
   const footer = document.createElement('div');
   footer.innerHTML = html;
-  await decorateIcons(footer);
+  const contactForm = footer.querySelector('.icon-contact-form');
+  if (contactForm) {
+    contactForm.parentNode.append(createContactForm());
+  }
   block.append(footer);
 }
