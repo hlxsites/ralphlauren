@@ -29,35 +29,35 @@
 }
 
 /* welcome columns */
-.columns.welcome {
+.section[data-purpose='Welcome'] .columns {
     margin: 5.063em auto 5.375em
 }
 
-.columns.welcome > div {
+.section[data-purpose='Welcome'] .columns > div {
     justify-content: center;
     align-items:  center;
 }
 
-.columns.welcome > div > div {
+.section[data-purpose='Welcome'] .columns > div > div {
     max-width: 38.625em;
 }
 
-.columns.welcome > div > div:nth-child(2) {
+.section[data-purpose='Welcome'] .columns > div > div:nth-child(2) {
     margin-left: 3.986em;
     flex: 0 1 31.250em;
 }
 
 @media only screen and (max-width: 767px) {
-    .columns.welcome {
+    .section[data-purpose='Welcome'] .columns {
         width: 21.25em;
         margin: 2.875em auto 3.188em
     }
 
-    .columns.welcome > div > div:nth-child(1) {
+    .section[data-purpose='Welcome'] .columns > div > div:nth-child(1) {
         height: 14.624em;
     }
 
-    .columns.welcome > div > div:nth-child(2) {
+    .section[data-purpose='Welcome'] .columns > div > div:nth-child(2) {
         margin-left: unset;
         margin-top: 1.625em;
         width: 19.438em;

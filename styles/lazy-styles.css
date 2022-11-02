@@ -1,1 +1,19 @@
-/* below the fold CSS goes here */
+.section[data-background-image] {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-background {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+    width: 100%;
+}
+
+.section-background img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
