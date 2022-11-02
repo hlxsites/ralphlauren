@@ -71,6 +71,10 @@
     overflow: hidden;
 }
 
+.section[data-background-image][data-background-color] {
+    z-index: -2;
+}
+
 .section-background {
     position: absolute;
     display: flex;

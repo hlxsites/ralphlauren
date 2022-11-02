@@ -122,6 +122,7 @@ main .section {
   letter-spacing: 0.019em;
 }
 
+.columns.invert, 
 .section.story.invert > .default-content-wrapper {
   color: white;
 }

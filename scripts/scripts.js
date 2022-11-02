@@ -93,6 +93,14 @@ function buildSectionBackgrounds(main) {
       section.insertAdjacentElement('afterbegin', div);
     }
   });
+  main.querySelectorAll(':scope > [data-background-color]').forEach((section) => {
+    if (section.dataset.backgroundColor) {
+      const backgroundColor = section.dataset.backgroundColor.match(/#[A-Fa-f0-9]{6}/);
+      if (backgroundColor) {
+        [section.style.backgroundColor] = backgroundColor;
+      }
+    }
+  });
 }
 
 /**

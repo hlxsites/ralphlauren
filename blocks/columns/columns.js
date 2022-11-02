@@ -2,10 +2,19 @@ export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
 
-  const columnsWrapper = block.parentElement;
-  const columnsWrappers = columnsWrapper.parentElement.querySelectorAll('.columns-wrapper');
-  const columnsWrapperIndex = [...columnsWrappers].indexOf(columnsWrapper);
-  columnsWrapper.classList.add(`columns-wrapper-${columnsWrapperIndex + 1}`);
+  const section = block.parentElement.parentElement;
+  let sectionEl = section.firstElementChild;
+
+  if (sectionEl.matches('.section-background')) {
+    sectionEl = sectionEl.nextElementSibling;
+  }
+  if (sectionEl.matches('.default-content-wrapper')) {
+    sectionEl = sectionEl.nextElementSibling;
+  }
+  for (let index = 1; sectionEl; index += 1) {
+    sectionEl.classList.add(`columns-wrapper-${index}`);
+    sectionEl = sectionEl.nextElementSibling;
+  }
 
   cols.forEach((col, index) => {
     col.classList.add(`column-${index + 1}`);
