@@ -55,8 +55,10 @@ function buildImage(src, alt, cls, width, height, cb) {
       .then((text) => {
         const fragment = new DOMParser().parseFromString(text, 'image/svg+xml');
         const svg = fragment.querySelector('svg');
-        cls.split(' ').forEach((c) => svg.classList.add(c));
-        img.replaceWith(svg);
+        if (svg) {
+          cls.split(' ').forEach((c) => svg.classList.add(c));
+          img.replaceWith(svg);
+        }
       });
   }
 }
