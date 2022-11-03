@@ -2,6 +2,7 @@ export default function decorate(block) {
   const children = [...block.children];
   const {
     backgroundimage,
+    image,
     link,
     title,
     pretitle,
@@ -25,6 +26,10 @@ export default function decorate(block) {
   const div = document.createElement('div');
   div.classList.add('teaser-content');
 
+  if (image) {
+    image.classList.add('image');
+    div.appendChild(image);
+  }
   if (pretitle) {
     pretitle.classList.add('pretitle');
     div.appendChild(pretitle);
@@ -38,7 +43,7 @@ export default function decorate(block) {
     div.appendChild(description);
   }
   if (link) {
-    link.classList.add('link');
+    link.classList.add(link.children.length === 1 ? 'link' : 'linklist');
     div.appendChild(link);
   }
 

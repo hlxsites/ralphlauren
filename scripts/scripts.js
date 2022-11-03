@@ -40,6 +40,29 @@ function buildHeroBlock(main) {
   }
 }
 
+function buildImage(src, alt, cls, width, height, cb, inline = false) {
+  const img = document.createElement('img');
+  img.className = cls;
+  img.alt = alt;
+  img.src = src;
+  img.width = width;
+  img.height = height;
+  cb(img);
+  // if it is an svg replace the image with the svg itself so we can style it
+  if (src.endsWith('.svg') && inline) {
+    fetch(src)
+      .then((resp) => resp.text())
+      .then((text) => {
+        const fragment = new DOMParser().parseFromString(text, 'image/svg+xml');
+        const svg = fragment.querySelector('svg');
+        if (svg) {
+          cls.split(' ').forEach((c) => svg.classList.add(c));
+          img.replaceWith(svg);
+        }
+      });
+  }
+}
+
 function buildImageSignatures(main) {
   main.querySelectorAll('em').forEach((em) => {
     const alt = em.innerText.trim();
@@ -47,34 +70,43 @@ function buildImageSignatures(main) {
     let src;
     let width;
     let height;
+    let inline = false;
     if (lower === 'rl at home') {
       src = '/icons/rl-at-home.svg';
       width = 482;
       height = 152;
+      inline = true;
     } else if (lower === 'rl signature') {
       src = '/icons/rl-signature.webp';
       width = 370;
       height = 80;
     }
     if (src) {
-      const img = document.createElement('img');
-      img.className = `image-signature ${lower.replaceAll(' ', '-')}`;
-      img.alt = alt;
-      img.src = src;
-      img.width = width;
-      img.height = height;
-      em.replaceWith(img);
-      // if it is an svg replace the image with the svg itself so we can style it
-      if (src.endsWith('.svg')) {
-        fetch(src)
-          .then((resp) => resp.text())
-          .then((text) => {
-            const fragment = new DOMParser().parseFromString(text, 'image/svg+xml');
-            const svg = fragment.querySelector('svg');
-            svg.classList.add('image-signature', lower.replaceAll(' ', '-'));
-            img.replaceWith(svg);
-          });
-      }
+      buildImage(src, alt, `image-signature ${lower.replaceAll(' ', '-')}`, width, height, (img) => em.replaceWith(img), inline);
+    }
+  });
+}
+
+function buildImageLinks(main) {
+  main.querySelectorAll('a[href]').forEach((link) => {
+    const { href } = link;
+    let src;
+    let width;
+    let height;
+    let cls;
+    if (href && href.indexOf('https://itunes.apple.com/') === 0) {
+      src = '/icons/Apple-App-Store-Badge.svg';
+      width = 300;
+      height = 100;
+      cls = 'app-store apple-app-store';
+    } else if (href && href.indexOf('https://play.google.com/') === 0) {
+      src = '/icons/Google-Play-App-Store-badge.svg';
+      width = 300;
+      height = 89;
+      cls = 'app-store google-play';
+    }
+    if (src) {
+      buildImage(src, link.innerText, cls, width, height, (img) => link.replaceChildren(img));
     }
   });
 }
@@ -126,6 +158,7 @@ function buildAutoBlocks(main) {
   try {
     buildHeroBlock(main);
     buildImageSignatures(main);
+    buildImageLinks(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);

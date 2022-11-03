@@ -70,6 +70,12 @@
     margin-bottom: 6.250em;
 }
 
+.story.app .columns-wrapper-1 {
+    background-color: unset;
+    height: unset;
+    margin-bottom: unset;
+}
+
 .story .columns-wrapper-2 {
     margin-bottom: 3.125em;   
 }
@@ -86,7 +92,6 @@
 .story .columns-wrapper-2 .narrow .column-text-only {
     max-width: 27.875em;
 }
-
 
 .story .column-1.column-image-only {
     flex: 1 0 50.250em;
