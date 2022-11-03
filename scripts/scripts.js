@@ -103,6 +103,21 @@ function buildSectionBackgrounds(main) {
   });
 }
 
+export async function lookupPages(pathnames) {
+  if (!window.pageIndex) {
+    const resp = await fetch(`${window.hlx.codeBasePath}/query-index.json`);
+    const json = await resp.json();
+    const lookup = {};
+    json.data.forEach((row) => {
+      lookup[row.path] = row;
+      if (row.image || row.image.startsWith('/default-meta-image.png')) row.image = `/${window.hlx.codeBasePath}${row.image}`;
+    });
+    window.pageIndex = { data: json.data, lookup };
+  }
+  const result = pathnames.map((path) => window.pageIndex.lookup[path]).filter((e) => e);
+  return (result);
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
