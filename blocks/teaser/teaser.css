@@ -78,10 +78,60 @@
     display: block;
 }
 
+.welcome .teaser.image .image {
+    margin-bottom: 2em;
+}
+
 .story.app .teaser.image .image {
     margin-bottom: -5em;
 }
 
 .story.app .teaser.image .teaser-content {
     padding-bottom: 2.7em;
+}
+
+.welcome .teaser.image .teaser-content .description {
+    font-size: 1.188em;
+    line-height: 1.579em;
+    width: 34em;
+    margin: 0 auto;
+}
+
+.welcome .teaser.image .pretitle {
+    position: absolute;
+    top: 4em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.125em;
+    letter-spacing: 0.019em;
+    line-height: 1.206em;
+}
+
+.welcome .teaser.image .title {
+    position: absolute;
+    top: 8em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.125em;
+    letter-spacing: 0.019em;
+    line-height: 1.206em;
+}
+
+.welcome .teaser.image.invert .title,
+.welcome .teaser.image.invert .pretitle {
+    color: white;
+}
+
+.welcome .teaser.image .title img.rl-signature {
+    width: 5.725em;
+}
+
+.welcome .teaser.image.invert .title img.rl-signature {
+    filter: invert(1) brightness(2);
+}
+
+.welcome .teaser.image {
+    width: 69.000em;
+    margin-left: auto;
+    margin-right: auto;
 }
