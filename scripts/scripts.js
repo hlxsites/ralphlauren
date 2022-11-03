@@ -40,7 +40,7 @@ function buildHeroBlock(main) {
   }
 }
 
-function buildImage(src, alt, cls, width, height, cb) {
+function buildImage(src, alt, cls, width, height, cb, inline = false) {
   const img = document.createElement('img');
   img.className = cls;
   img.alt = alt;
@@ -49,7 +49,7 @@ function buildImage(src, alt, cls, width, height, cb) {
   img.height = height;
   cb(img);
   // if it is an svg replace the image with the svg itself so we can style it
-  if (src.endsWith('.svg')) {
+  if (src.endsWith('.svg') && inline) {
     fetch(src)
       .then((resp) => resp.text())
       .then((text) => {
@@ -70,17 +70,19 @@ function buildImageSignatures(main) {
     let src;
     let width;
     let height;
+    let inline = false;
     if (lower === 'rl at home') {
       src = '/icons/rl-at-home.svg';
       width = 482;
       height = 152;
+      inline = true;
     } else if (lower === 'rl signature') {
       src = '/icons/rl-signature.webp';
       width = 370;
       height = 80;
     }
     if (src) {
-      buildImage(src, alt, `image-signature ${lower.replaceAll(' ', '-')}`, width, height, (img) => em.replaceWith(img));
+      buildImage(src, alt, `image-signature ${lower.replaceAll(' ', '-')}`, width, height, (img) => em.replaceWith(img), inline);
     }
   });
 }
