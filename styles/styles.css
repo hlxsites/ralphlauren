@@ -138,6 +138,7 @@ main .section {
 .section.story h2 ~ p {
   font-size: 1.188em;
 }
+
 /* CTA Button */
 .section.cta-button {
   display: flex;
@@ -148,8 +149,8 @@ main .section {
   font-family: 'Founders Grotesk Mono Regular', sans-serif;
   text-transform: uppercase;
   text-decoration: none;
-  color: currentColor;
-  border: 1px solid currentColor;
+  color: currentcolor;
+  border: 1px solid currentcolor;
   display: inline-block;
   padding: 1.313em 1.625em;
   line-height: 0.688em;
