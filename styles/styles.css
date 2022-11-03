@@ -111,3 +111,7 @@ main .section {
   max-width: 1920px;
   margin: 0 auto 2.063em;
 }
+
+.section.welcome {
+  margin: 5.063em auto 5.375em
+}
