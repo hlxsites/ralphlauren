@@ -80,7 +80,7 @@ function buildImageSignatures(main) {
       height = 80;
     }
     if (src) {
-      buildImage(src, alt, `image-signature ${lower.replaceAll(' ', '-')}`, width, height, img => em.replaceWith(img));
+      buildImage(src, alt, `image-signature ${lower.replaceAll(' ', '-')}`, width, height, (img) => em.replaceWith(img));
     }
   });
 }
@@ -98,15 +98,15 @@ function buildImageLinks(main) {
       height = 100;
       cls = 'app-store apple-app-store';
     } else if (href && href.indexOf('https://play.google.com/') === 0) {
-      src ='/icons/Google-Play-App-Store-badge.svg';
+      src = '/icons/Google-Play-App-Store-badge.svg';
       width = 300;
       height = 89;
       cls = 'app-store google-play';
     }
     if (src) {
-      buildImage(src, link.innerText, cls, width, height, img => link.replaceChildren(img));
+      buildImage(src, link.innerText, cls, width, height, (img) => link.replaceChildren(img));
     }
-  })
+  });
 }
 
 function buildSectionBackgrounds(main) {
